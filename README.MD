@@ -1,14 +1,14 @@
 # Docker 教程
 
 ## Docker服务镜像列表
-- [x] tomcat
-- [x] mysql
-- [ ] memcached
-- [ ] FastDFS
-- [x] redis
-- [x] jenkins
+- [ ] fastdfs
 - [x] gitlab
+- [x] jenkins
+- [x] mysql
 - [x] nexus3
+- [x] nginx
+- [x] redis
+- [x] tomcat
 
 ## 镜像加速地址
 http://adbcd100.m.daocloud.io
