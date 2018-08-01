@@ -1,0 +1,1 @@
+docker run --name jenkins -p 8090:8080 -p 50000:50000 -v /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-jenkins/data:/var/jenkins_home jenkins
