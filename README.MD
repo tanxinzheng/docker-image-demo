@@ -5,18 +5,19 @@
 - 尽量使用同一版本的linux系统(该示例统一使用centos:7)自建基础镜像，方便添加，查看ip，查看端口，jdk环境，日志备份等基础服务
 
 ## Docker服务镜像列表
-- [ ] fastdfs
+- [x] mongodb
+- [x] mysql
+- [x] postgresql
+- [x] portainer
+- [x] fastdfs
 - [x] gitlab
 - [x] jenkins
-- [x] mysql
 - [x] nexus3
 - [x] nginx
 - [x] redis
 - [x] tomcat
-- [ ] elk
+- [x] elk
 - [ ] spark
-- [ ] mongodb
-- [ ] portainer
 - [ ] registry
 
 ## 镜像加速地址

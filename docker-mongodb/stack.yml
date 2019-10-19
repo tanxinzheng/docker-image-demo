@@ -8,8 +8,8 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - /Users/jeng/tanxinzheng-repo/docker/docker-image-data/docker-mongodb/data:/data/db
-      - /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-mongodb/config:/etc/mongo
+      - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-mongodb/data:/data/db
+      - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-demo/docker-mongodb/config:/etc/mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root

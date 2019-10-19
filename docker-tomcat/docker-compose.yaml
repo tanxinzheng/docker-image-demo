@@ -10,4 +10,4 @@ services:
       vpcbr:
         ipv4_address: 172.20.0.8
     volumes:
-    - /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-tomcat/data/gitlab:/home/git/data:Z
+    - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-tomcat/data/gitlab:/home/git/data:Z

@@ -10,8 +10,8 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-redis/data:/data
-      - /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-redis/conf/redis.conf:/etc/redis/redis.conf
+      - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-redis/data:/data
+      - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-demo/docker-redis/conf/redis.conf:/etc/redis/redis.conf
     networks:
       - local_net
 networks:

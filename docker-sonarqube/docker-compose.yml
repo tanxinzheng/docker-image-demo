@@ -1,15 +1,15 @@
 version: '3.3'
 
 services:
-
-  db:
-    image: postgres
-    restart: always
-    volumes:
-      - $PWD/db:/var/lib/postgresql/data
-    environment:
-      POSTGRES_PASSWORD: sonar
-      POSTGRES_USER: sonar
+#
+#  db:
+#    image: postgres
+#    restart: always
+#    volumes:
+#      - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-postgresql/db:/var/lib/postgresql/data
+#    environment:
+#      POSTGRES_PASSWORD: sonar
+#      POSTGRES_USER: sonar
 
   sonarqube:
     image: sonarqube
@@ -18,7 +18,7 @@ services:
       - 9100:9000
       - 9192:9092
     volumes:
-      - /Users/jeng/tanxinzheng-repo/docker/docker-image-data/docker-postgresql/sonar2:/opt/sonarqube/data
+      - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-sonarqube/sonar2:/opt/sonarqube/data
    depends_on:
       - postgresql
     environment:

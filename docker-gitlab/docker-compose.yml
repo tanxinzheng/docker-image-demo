@@ -6,7 +6,7 @@ services:
   #   image: sameersbn/redis:4.0.9-1
   #   network_mode: bridge
   #   volumes:
-  #   - /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-gitlab/data/redis:/var/lib/redis:Z
+  #   - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-gitlab/data/redis:/var/lib/redis:Z
 
   # postgresql:
   #   #restart: always
@@ -14,7 +14,7 @@ services:
   #   networks:
   #   - local_net
   #   volumes:
-  #   - /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-gitlab/data/postgresql:/var/lib/postgresql:Z
+  #   - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-gitlab/data/postgresql:/var/lib/postgresql:Z
   #   environment:
   #   - DB_USER=gitlab
   #   - DB_PASS=gitlab
@@ -34,7 +34,7 @@ services:
     - "10080:80"
     - "10022:22"
     volumes:
-    - /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-gitlab/data/gitlab:/home/git/data:Z
+    - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-gitlab/data/gitlab:/home/git/data:Z
     environment:
     - DEBUG=false
 

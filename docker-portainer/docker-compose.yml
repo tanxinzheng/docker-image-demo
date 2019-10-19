@@ -10,7 +10,7 @@ services:
       - local
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-portainer/data:/data
+      - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-portainer/data:/data
     ports:
       - "1000:9000"
 

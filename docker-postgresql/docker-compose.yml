@@ -4,8 +4,6 @@ services:
   postgresql:
     image: postgres:9.6.2
     container_name: postgresql
-    # networks:
-    #   - local_net
     ports:
       - 5432:5432
     environment:
@@ -13,8 +11,4 @@ services:
       POSTGRES_PASSWORD: postgres
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
-      - /Users/jeng/tanxinzheng-repo/docker/docker-image-data/docker-postgresql/data:/var/lib/postgresql/data/pgdata
-# networks:
-#   local_net:
-#     external:
-#       name: app_net
+      - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-postgresql/data:/var/lib/postgresql/data/pgdata

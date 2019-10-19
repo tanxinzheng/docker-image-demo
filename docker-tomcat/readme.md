@@ -2,7 +2,7 @@
 
 ## 创建镜像
 ```docker
-docker build -t tanxinzheng/tomcat /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-tomcat
+docker build -t tanxinzheng/tomcat /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-demo/docker-tomcat
 ```
 
 ## 启动Docker服务

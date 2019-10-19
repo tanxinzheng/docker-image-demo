@@ -20,14 +20,14 @@ docker run --name gitlab-postgresql -d \
 --env 'DB_NAME=gitlabhq_production' \
 --env 'DB_USER=gitlab' --env 'DB_PASS=123456' \
 --env 'DB_EXTENSION=pg_trgm' \
---volume /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-gitlab/data/postgresql:/var/lib/postgresql \
+--volume /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-gitlab/data/postgresql:/var/lib/postgresql \
 sameersbn/postgresql:9.5-3
 ```
 
 ## 启动redis
 ```docker
 docker run --name gitlab-redis -d \
---volume /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-gitlab/data/redis:/var/lib/redis \
+--volume /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-gitlab/data/redis:/var/lib/redis \
 sameersbn/redis:latest
 ```
 
@@ -40,19 +40,19 @@ docker run --name gitlab -d \
 --env 'GITLAB_SECRETS_DB_KEY_BASE=long-and-random-alpha-numeric-string' \
 --env 'GITLAB_SECRETS_SECRET_KEY_BASE=long-and-random-alpha-numeric-string' \
 --env 'GITLAB_SECRETS_OTP_KEY_BASE=long-and-random-alpha-numeric-string' \
---volume /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-gitlab/data/gitlab:/home/git/data \
+--volume /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-gitlab/data/gitlab:/home/git/data \
 sameersbn/gitlab:latest
 ```
 
 ## 启动gitlab-runner
 ```docker
 docker run --name gitlab-ci-runner -it --rm \
-  -v /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-gitlab/gitlab-runner/data:/home/gitlab_ci_runner/data \
+  -v /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-gitlab/gitlab-runner/data:/home/gitlab_ci_runner/data \
   sameersbn/gitlab-ci-runner:latest
 ```
 
 ```docker
-docker run --rm -t -i -v /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-gitlab/gitlab-runner/config:/etc/gitlab-runner --name gitlab-runner gitlab/gitlab-runner register \
+docker run --rm -t -i -v /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-gitlab/gitlab-runner/config:/etc/gitlab-runner --name gitlab-runner gitlab/gitlab-runner register \
   --url "http://127.0.0.1:10080/" \
   --registration-token "JEDdssixUgG9G-y_wYgo" \
   --description "docker-runner" \

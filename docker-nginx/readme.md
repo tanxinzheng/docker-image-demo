@@ -2,7 +2,7 @@
 
 ## 创建镜像
 ```docker
-docker build -t tanxinzheng/nginx /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-nginx
+docker build -t tanxinzheng/nginx /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-demo/docker-nginx
 ```
 
 ## 启动服务
