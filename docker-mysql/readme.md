@@ -12,8 +12,8 @@ docker pull mysql:5.7.19
 ```
 启动Mysql容器
 docker run --name mysql -p 3306:3306 \
--v /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-mysql/logs:/var/log \
--v /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-mysql/data:/var/lib/mysql \
+-v /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-mysql/logs2:/var/log \
+-v /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-mysql/data2:/var/lib/mysql \
 -e MYSQL_ROOT_PASSWORD=123456 \
 -d mysql:5.7.19 \
 --character-set-server=utf8 \

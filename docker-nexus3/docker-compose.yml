@@ -1,0 +1,14 @@
+version: '3'
+
+services: 
+  nexus: 
+    #restart: always
+    container_name: nexus
+    image: sonatype/nexus3
+    ports:
+    - "10003:8081"
+    volumes:
+    - /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-nexus3/data:/nexus-data
+    environment:
+      TZ: Asia/Shanghai
+      NEXUS_CONTEXT: /

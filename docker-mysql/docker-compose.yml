@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  mysql: 
+    restart: always
+    container_name: mysql
+    image: mysql:5.7.19
+    ports:
+    - 3306:3306
+    volumes: 
+    - /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-mysql/data:/var/lib/mysql
+    - /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-mysql/config/my.cnf:/etc/mysql/my.cnf 
+    environment:
+    - MYSQL_ROOT_PASSWORD=123456
+    - character-set-server=utf8
+    - collation-server=utf8_general_ci

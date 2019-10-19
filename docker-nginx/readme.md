@@ -2,10 +2,16 @@
 
 ## 创建镜像
 ```docker
-docker build -t tanxinzheng/nginx /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-nginx
+docker build -t tanxinzheng/nginx /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-nginx
 ```
 
 ## 启动服务
 ```docker
-docker run -d --name nginx -p 80:80 tanxinzheng/nginx
+docker run -d --name nginx -p 1080:80 tanxinzheng/nginx
+```
+
+## 从主机传输文件到指定容器目录
+```
+docker cp /xxxx.txt 容器名称或容器ID:/xxx/target
+docker cp ./download/spark-2.4.0-bin-hadoop2.6.tgz local-download:/usr/share/nginx/html/download/
 ```

@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  jenkins:
+    restart: always
+    container_name: jenkins
+    image: jenkins/jenkins:2.140
+    ports:
+    - 28090:8080
+    - 50000:50000
+    mem_limit: 2095
+    memswap_limit: 2000000000
+    volumes:
+    - /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-jenkins/data:/var/jenkins_home

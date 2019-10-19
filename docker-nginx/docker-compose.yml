@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  nginx-download:
+    restart: always
+    container_name: local-download
+    image: tanxinzheng/nginx
+    ports:
+      - "1080:80"
+    volumes:
+      - ./download:/usr/share/nginx/html/download
+      - ./config/nginx.conf:/etc/nginx/nginx.conf

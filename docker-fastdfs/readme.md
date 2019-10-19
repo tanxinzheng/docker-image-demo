@@ -2,7 +2,7 @@
 
 ## 创建镜像
 ```docker
-docker build -t tanxinzheng/fastdfs /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-fastdfs
+docker build -t tanxinzheng/fastdfs /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-fastdfs
 ```
 
 ## 安装Docker服务
@@ -15,7 +15,7 @@ docker run -d --name fdfs \
     -p 22122:22122 \
     -p 20888:8888 \
     -p 20808:8080 \
-    -v /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-fastdfs/data:/data/fastdfs_data \
+    -v /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-fastdfs/data:/data/fastdfs_data \
     -e TRACKER_IP=192.168.1.102:22122 \
     -e GROUP_NAME=group1 \
     morunchang/fastdfs sh -c "sh tracker.sh && sh storage.sh"
@@ -31,11 +31,11 @@ docker stop fdfs && docker rm fdfs
 ## Mac下运行fastdfs服务
 ```docker
 # 启动 tracker
-/usr/bin/fdfs_trackerd /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-fastdfs/lib/fastdfs/conf/tracker.conf
+/usr/bin/fdfs_trackerd /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-fastdfs/lib/fastdfs/conf/tracker.conf
 # 启动 storage
-/usr/bin/fdfs_storaged /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-fastdfs/lib/fastdfs/conf/storage.conf
+/usr/bin/fdfs_storaged /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-fastdfs/lib/fastdfs/conf/storage.conf
 # 测试
-/usr/bin/fdfs_upload_file /Users/jeng/xmomen-repo/docker/docker-image-demo/docker-fastdfs/lib/fastdfs/conf/client.conf test.txt
+/usr/bin/fdfs_upload_file /Users/jeng/tanxinzheng-repo/docker/docker-image-demo/docker-fastdfs/lib/fastdfs/conf/client.conf test.txt
 ```
 
 ## 常用命令
