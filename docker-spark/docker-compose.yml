@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  spark:
+    image: tanxinzheng/spark
+    container_name: spark
+    ports:
+      - "6066:6066"
+      - "7070:7070"
+      - "28080:8080"
+      - "50070:50070"
+  #worker:
+  #  image: singularities/spark
+  #  command: start-spark worker master
+  #  environment:
+  #    SPARK_WORKER_CORES: 1
+  #    SPARK_WORKER_MEMORY: 2g
+  #  links:
+  #    - master

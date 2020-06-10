@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  tomcat:
+    #restart: always
+    image: amancevice/superset:latest
+    ports:
+      - "10001:8088"
+    networks:       
+      work_net:
+        ipv4_address: 172.20.0.20
+    volumes:
+      - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-superset/data:/home/superset
+
+networks:
+  work_net:
+    external: true

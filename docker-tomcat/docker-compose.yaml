@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  tomcat:
+    restart: always
+    image: tomcat:latest-alpine
+    ports:
+    - "10001:8080"
+    networks:
+      vpcbr:
+        ipv4_address: 172.20.0.8
+    volumes:
+    - /Users/jeng/tanxinzheng-repo/docker-repo/docker-image-data/docker-tomcat/data/gitlab:/home/git/data:Z

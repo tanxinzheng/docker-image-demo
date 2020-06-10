@@ -1,0 +1,1 @@
+docker run -d --name xxl-job-admin --net host xuxueli/xxl-job-admin:2.0.2

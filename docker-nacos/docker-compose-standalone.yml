@@ -1,0 +1,20 @@
+version: '2' 
+
+services:
+  nacos:
+    image: nacos/nacos-server:1.2.0
+    container_name: nacos-server-standalone
+    environment:
+      - MODE=standalone
+    volumes:
+      - ./data/standalone-logs:/home/nacos/logs
+      - ./init.d/custom.properties:/home/nacos/init.d/custom.properties 
+    ports:
+      - 8848:8848
+    networks:
+      work_net:
+        ipv4_address: 172.20.0.18
+
+networks:
+  work_net:
+    external: true

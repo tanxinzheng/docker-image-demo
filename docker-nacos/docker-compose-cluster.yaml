@@ -1,0 +1,48 @@
+version: "2"
+services:
+  nacos1:
+    image: nacos/nacos-server:latest
+    container_name: nacos1
+    networks:
+      work_net:
+        ipv4_address: 172.20.0.100
+    volumes:
+      - ./data/cluster-logs/nacos1:/home/nacos/logs
+    ports:
+      - "8848:8848"
+      - "9555:9555"
+    env_file:
+      - ./env/nacos-ip.env
+    restart: always
+
+  nacos2:
+    image: nacos/nacos-server:latest
+    container_name: nacos2
+    networks:
+      work_net:
+        ipv4_address: 172.20.0.101
+    volumes:
+      - ./data/cluster-logs/nacos2:/home/nacos/logs
+    ports:
+      - "8849:8848"
+    env_file:
+      - ./env/nacos-ip.env
+    restart: always
+
+  nacos3:
+    image: nacos/nacos-server:latest
+    container_name: nacos3
+    networks:
+      work_net:
+        ipv4_address: 172.20.0.102
+    volumes:
+      - ./data/cluster-logs/nacos3:/home/nacos/logs
+    ports:
+      - "8850:8848"
+    env_file:
+      - ./env/nacos-ip.env
+    restart: always
+    
+networks:
+  work_net:
+    external: true

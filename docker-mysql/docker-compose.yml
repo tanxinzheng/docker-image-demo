@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  mysql: 
+    restart: always
+    container_name: mysql
+    image: mysql:5.7.19
+    networks:
+      work_net:
+        ipv4_address: 172.20.0.5
+    ports:
+    - 3306:3306
+    volumes: 
+    - ./data:/var/lib/mysql
+    - ./config/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+    environment:
+    - MYSQL_ROOT_PASSWORD=123456
+    - character-set-server=utf8
+    - collation-server=utf8_general_ci
+    
+networks:
+  work_net:
+    external: true

@@ -1,0 +1,22 @@
+{
+  "port": "3000",
+  "adminAccount": "admin@admin.com",
+  "db": {
+    "servername": "172.25.0.3",
+    "DATABASE": "yapi",
+    "port": 27017,
+    "user": "root",
+    "pass": "root",
+    "authSource": "admin"
+  },
+  "mail": {
+    "enable": false,
+    "host": "smtp.139.com",
+    "port": 465,
+    "from": "***@163.com",
+    "auth": {
+      "user": "tanxinzheng@139.com",
+      "pass": ""
+    }
+  }
+}

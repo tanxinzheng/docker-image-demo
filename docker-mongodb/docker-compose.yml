@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    container_name: "mongodb"
+    #restart: always
+    networks: 
+      - work_net
+    ports:
+      - 27017:27017
+    volumes:
+      - ../../docker-image-data/docker-mongodb/data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+# mongodb web管理平台
+  mongo-express:
+    image: mongo-express
+    container_name: "mongo-express"
+    restart: always
+    networks: 
+      - work_net
+    ports:
+      - 10005:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: root
+
+networks:
+  work_net:
+    external: true

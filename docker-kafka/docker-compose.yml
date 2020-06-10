@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  zk:
+    image: tanxinzheng/kafka
+    command: bin/zookeeper-server-start.sh config/zookeeper.properties
+  kafka:
+    image: tanxinzheng/kafka
+    command: bin/kafka-server-start.sh config/server.properties

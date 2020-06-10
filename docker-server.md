@@ -1,0 +1,96 @@
+## 容器服务端口列表
+
+<table>
+	<tr>
+		<td>服务名称</td>
+		<td>URL</td>
+		<td>服务端口</td>
+		<td>容器IP</td>
+		<td>容器端口</td>
+	</tr>
+	<tr>
+		<td>mysql</td>
+		<td>http://localhost:3306</td>
+		<td>3306</td>
+		<td>172.20.0.5</td>
+		<td>3306</td>
+	</tr>
+	<tr>
+		<td>portainer</td>
+		<td>http://localhost:9000</td>
+		<td>9000</td>
+		<td>172.20.0.25</td>
+		<td>9000</td>
+	</tr>
+	<tr>
+		<td>postgrelsql</td>
+		<td>http://localhost:5432</td>
+		<td>5432</td>
+		<td>172.20.0.8</td>
+		<td>5432</td>
+	</tr>
+	<tr>
+		<td>nacos-cluster</td>
+		<td>http://localhost:8848</td>
+		<td>8848~8850</td>
+		<td>172.20.0.120~122</td>
+		<td>8848~8850</td>
+	</tr>
+	<tr>
+		<td>mongo</td>
+		<td>http://localhost:27017</td>
+		<td>27017</td>
+		<td></td>
+		<td>27017</td>
+	</tr>
+	<tr>
+		<td>redis-cluster</td>
+		<td></td>
+		<td>7000~7005</td>
+		<td>172.20.0.4</td>
+		<td>7000~7005</td>
+	</tr>
+	<tr>
+		<td>yapi</td>
+		<td>http://localhost:3000</td>
+		<td>3000</td>
+		<td></td>
+		<td>3000</td>
+	</tr>
+	<tr>
+		<td>nginx(下载服务)</td>
+		<td>http://localhost:1080</td>
+		<td>1080</td>
+		<td></td>
+		<td>80</td>
+	</tr>
+	<tr>
+		<td>nexus</td>
+		<td>http://localhost:10003</td>
+		<td>10003</td>
+		<td></td>
+		<td>8080</td>
+	</tr>
+	<tr>
+		<td>jenkins</td>
+		<td>http://localhost:28090</td>
+		<td>28090</td>
+		<td></td>
+		<td>8080</td>
+	</tr>
+	<tr>
+		<td>sonarqube</td>
+		<td>http://localhost:9100</td>
+		<td>9100, 9192</td>
+		<td></td>
+		<td>9000, 9092</td>
+	</tr>
+	<tr>
+		<td>gitlab</td>
+		<td>http://localhost:10080</td>
+		<td>10080, 10022</td>
+		<td></td>
+		<td>80, 22</td>
+	</tr>
+	
+</table>
