@@ -16,7 +16,8 @@
 - [x] nginx
 - [x] redis
 - [x] tomcat
-- [x] elk
+- [x] nacos
+- [ ] elk
 - [ ] spark
 - [ ] registry
 
