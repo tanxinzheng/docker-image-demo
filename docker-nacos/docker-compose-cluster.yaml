@@ -13,7 +13,7 @@ services:
       - "9555:9555"
     env_file:
       - ./env/nacos-ip.env
-    restart: always
+    #restart: always
 
   nacos2:
     image: nacos/nacos-server:latest
@@ -27,7 +27,7 @@ services:
       - "8849:8848"
     env_file:
       - ./env/nacos-ip.env
-    restart: always
+    #restart: always
 
   nacos3:
     image: nacos/nacos-server:latest
@@ -41,7 +41,7 @@ services:
       - "8850:8848"
     env_file:
       - ./env/nacos-ip.env
-    restart: always
+    #restart: always
     
 networks:
   work_net:

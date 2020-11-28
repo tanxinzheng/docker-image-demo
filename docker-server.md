@@ -82,7 +82,7 @@
 		<td>sonarqube</td>
 		<td>http://localhost:9100</td>
 		<td>9100, 9192</td>
-		<td></td>
+		<td>172.20.0.19</td>
 		<td>9000, 9092</td>
 	</tr>
 	<tr>

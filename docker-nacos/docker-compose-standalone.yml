@@ -2,8 +2,8 @@ version: '2'
 
 services:
   nacos:
-    image: nacos/nacos-server:1.2.0
-    container_name: nacos-server-standalone
+    image: nacos/nacos-server:latest
+    container_name: nacos-standalone
     environment:
       - MODE=standalone
     volumes:
@@ -13,7 +13,7 @@ services:
       - 8848:8848
     networks:
       work_net:
-        ipv4_address: 172.20.0.18
+        ipv4_address: 172.20.0.99
 
 networks:
   work_net:

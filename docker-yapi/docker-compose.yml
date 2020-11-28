@@ -9,7 +9,6 @@ services:
         ipv4_address: 172.20.0.13
     volumes:
       - ./config/config.json:/api/config.json
-    restart: always
     ports:
       - "3000:3000"
     working_dir: /api/vendors

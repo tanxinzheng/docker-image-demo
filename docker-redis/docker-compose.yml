@@ -18,17 +18,20 @@ services:
       - "7004:7004"
       - "7005:7005"
     volumes:
+      - ./data:/data
       - ./config:/etc/redis
+
+    #  --cluster-announce-ip 若配置中的ip有修改需要添加该参数对集群ip更新
     command: 
       - /bin/bash 
       - -c 
       - |
-        redis-server /etc/redis/redis_cluster_7000.conf --cluster-config-file nodes_7000.conf & 
-        redis-server /etc/redis/redis_cluster_7001.conf --cluster-config-file nodes_7001.conf &
-        redis-server /etc/redis/redis_cluster_7002.conf --cluster-config-file nodes_7002.conf &
-        redis-server /etc/redis/redis_cluster_7000.conf --cluster-config-file nodes_7003.conf --port 7003 & 
-        redis-server /etc/redis/redis_cluster_7001.conf --cluster-config-file nodes_7004.conf --port 7004 &
-        redis-server /etc/redis/redis_cluster_7002.conf --cluster-config-file nodes_7005.conf --port 7005
+        redis-server /etc/redis/redis_cluster_7000.conf --cluster-config-file nodes_7000.conf --cluster-announce-ip 127.0.0.1 & 
+        redis-server /etc/redis/redis_cluster_7001.conf --cluster-config-file nodes_7001.conf --cluster-announce-ip 127.0.0.1 &
+        redis-server /etc/redis/redis_cluster_7002.conf --cluster-config-file nodes_7002.conf --cluster-announce-ip 127.0.0.1 &
+        redis-server /etc/redis/redis_cluster_7003.conf --cluster-config-file nodes_7003.conf --cluster-announce-ip 127.0.0.1 & 
+        redis-server /etc/redis/redis_cluster_7004.conf --cluster-config-file nodes_7004.conf --cluster-announce-ip 127.0.0.1 &
+        redis-server /etc/redis/redis_cluster_7005.conf --cluster-config-file nodes_7005.conf --cluster-announce-ip 127.0.0.1 
 
 networks:
   work_net:
