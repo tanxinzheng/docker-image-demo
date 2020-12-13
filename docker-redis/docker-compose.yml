@@ -1,37 +1,27 @@
 version: '2'
 
 services:
-  cluster:
+  redis-stander:
     image: daocloud.io/redis
-    container_name: redis-cluster
+    container_name: redis-stander
     # 添加该参数后服务后台运行后，容器不会自动退出
     tty: true
     restart: always
-    networks:
+    # 必须使用host模式，否则容器
+    # network_mode: host
+    networks:       
       work_net:
         ipv4_address: 172.20.0.4
-    ports:
-      - "7000:7000"
-      - "7001:7001"
-      - "7002:7002"
-      - "7003:7003"
-      - "7004:7004"
-      - "7005:7005"
     volumes:
-      - ./data:/data
       - ./config:/etc/redis
-
-    #  --cluster-announce-ip 若配置中的ip有修改需要添加该参数对集群ip更新
+    ports:
+      - "6379:6379"
     command: 
       - /bin/bash 
       - -c 
       - |
-        redis-server /etc/redis/redis_cluster_7000.conf --cluster-config-file nodes_7000.conf --cluster-announce-ip 127.0.0.1 & 
-        redis-server /etc/redis/redis_cluster_7001.conf --cluster-config-file nodes_7001.conf --cluster-announce-ip 127.0.0.1 &
-        redis-server /etc/redis/redis_cluster_7002.conf --cluster-config-file nodes_7002.conf --cluster-announce-ip 127.0.0.1 &
-        redis-server /etc/redis/redis_cluster_7003.conf --cluster-config-file nodes_7003.conf --cluster-announce-ip 127.0.0.1 & 
-        redis-server /etc/redis/redis_cluster_7004.conf --cluster-config-file nodes_7004.conf --cluster-announce-ip 127.0.0.1 &
-        redis-server /etc/redis/redis_cluster_7005.conf --cluster-config-file nodes_7005.conf --cluster-announce-ip 127.0.0.1 
+        mkdir -p /var/lib/redis &
+        redis-server /etc/redis/redis.conf
 
 networks:
   work_net:

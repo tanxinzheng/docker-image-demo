@@ -2,7 +2,7 @@
 ### build centos7 container
 
 ```
-docker build -t txz/centos7 .
+docker build -t tanxz/centos7 .
 docker run txz/centos7 /bash
 ```
 
